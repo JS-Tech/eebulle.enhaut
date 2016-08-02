@@ -32,14 +32,14 @@
     	left: 30px;
     	position: absolute;
     	top: -5px;
-			font-weight: 700;
+			font-weight: 300;
+			color: #b8b725;
     }
     #scrollbar #scrolllinks li a:hover {
-    	color: rgba(0,0,0,0.69);
     	font-weight: 900;
     }
     #scrollbar #scrolllinks li.active a {
-    	color: rgba(0,0,0,0.69);
+    	color: rgba(183, 180, 175, 0.85);
     	font-weight: 900;
     }
 .unselectable {
