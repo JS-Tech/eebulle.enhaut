@@ -19,6 +19,17 @@ section.scrolling.s1 img {
 	float: left;
 	padding: 0 20px 20px 0;
 }
+section.scrolling.s1 img.bullen {
+	width: 300px;
+}
+section.scrolling.s1 img.right {
+	float: right;
+}
+section.scrolling.s1 img.people2 {
+	width: 300px;
+}
+
+
 section.scrolling.s3 {
 	background-color: #d52121;
 	color: #fff;
