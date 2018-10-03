@@ -1,102 +1,126 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Eglise le Refuge d'Enhaut</title>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="assets/stylesheets/application.css">
-		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/JS-Tech/op-common/master/op-stylesheet.css">
-		<script src="assets/javascripts/jquery-2.1.4.min.js"></script>
-		<script src="https://cdn.rawgit.com/nkcr/metroline.js/master/lib/metroline.min.js#1"></script>
 
-		<!-- favicon stuff -->
-		<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicons/apple-touch-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicons/apple-touch-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicons/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicons/apple-touch-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicons/apple-touch-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicons/apple-touch-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicons/apple-touch-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicons/apple-touch-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon-180x180.png">
-		<link rel="icon" type="image/png" href="/assets/images/favicons/favicon-32x32.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="/assets/images/favicons/favicon-194x194.png" sizes="194x194">
-		<link rel="icon" type="image/png" href="/assets/images/favicons/favicon-96x96.png" sizes="96x96">
-		<link rel="icon" type="image/png" href="/assets/images/favicons/android-chrome-192x192.png" sizes="192x192">
-		<link rel="icon" type="image/png" href="/assets/images/favicons/favicon-16x16.png" sizes="16x16">
-		<link rel="manifest" href="/assets/images/favicons/manifest.json">
-		<link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
-		<link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
-		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="msapplication-TileImage" content="/assets/images/favicons/mstile-144x144.png">
-		<meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
-		<meta name="theme-color" content="#ffffff">
+<head>
+	<title>Eglise le Refuge d'Enhaut</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="assets/stylesheets/application.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/JS-Tech/op-common/master/op-stylesheet.css">
+	<script src="assets/javascripts/jquery-2.1.4.min.js"></script>
+	<script src="https://cdn.rawgit.com/nkcr/metroline.js/master/lib/metroline.min.js#1"></script>
 
-		<!-- Mobile compatibility -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- favicon stuff -->
+	<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/assets/images/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/assets/images/favicons/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type="image/png" href="/assets/images/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/assets/images/favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/assets/images/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/assets/images/favicons/manifest.json">
+	<link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="/assets/images/favicons/mstile-144x144.png">
+	<meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
 
-		<!-- Analytics -->
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		  ga('create', 'UA-38967567-5', 'auto');
-		  ga('send', 'pageview');
-		</script>
-	</head>
-	<body>
+	<!-- Mobile compatibility -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- section n°1 -->
-    <section data-title="Bienvenue!" class="fixed f1" id="bienvenue">
-      <h1 class="maintitle">Pays-d'Enhaut</h1>
-			<p class="subtitle">
-				Célébration de l'évangile<br>
-				Gospel Celebration
-			</p>
-    </section>
-
-    <!-- section n°2 -->
-    <section data-title="Présentation" class="scrolling s1" id="presentation">
-      <div class="container">
-        <h2>Qui sommes-nous?</h2>
-				<p><img src="assets/images/bullen.png" class="bullen"><b>Les Célébrations de l’Evangile</b> sont des événements mensuels organisés par Le Refuge, église d'Enhaut, qui est membre du (<a href="https://network.eebulle.ch" target="_blank">Bulle network</a>). Nous créons ensemble un espace multiculturel et dynamique pour manifester la présence de Dieu en faveur de ceux qui le recherchent ou qui le connaissent déjà.</p>
-				<p>En plus de ces célébrations mensuelles, nous nous réunissons en groupe de maison tous les mardis soirs à 20:15 à Flendruz.</p>
-				<p><b>Notre mission</b> : Nous faisons connaître la puissance libératrice de Jésus-Christ dans le Pays d’en-Haut vaudois et l’Oberland bernois.</p>
-				<p><img src="assets/images/michelr.png" class="right"><b>Notre historique dans la région</b> : Nos activités ont démarré il y a plusieurs dizaines d’années par la création d'un groupe de prières chez Andrée Eggen à Flendruz sous la houlette du pasteur Michel Renevier. Ce groupe a su persévérer jusqu’à ce jour. Aujourd’hui, nous travaillons à une nouvelle saison de développement en démarrant une nouvelle communauté nommée: Le Refuge église d'Enhaut. Notre vision à terme est la croissance d'une église vivante dans cette magnifique région.</p>
-				
-				<p><img src="assets/images/people2.jpg" class="people2"><b>Notre équipe</b> : Nos activités sont au bénéfice de l'équipe de ministères du Bulle network. Nous avons la joie d’avoir sur place un couple
-				membre de notre équipe : le pasteur Jean-Pierre Sordet et son épouse Evelyne. Jean-Pierre est en âge de la retraite, mais
-				pas dans le ministère ! Son soutien, avec celui aussi de son épouse, sont très précieux au développement de l’église.</p>
-				
-				<p><b>Notre appartenance</b> : Notre église au pays-d'Enhaut, au travers du Bulle Network, est membre des Eglises Evangéliques Apostoliques Romandes (<a href="http://www.eear.ch">www.eear.ch</a>) et appartient au Réseau Evangélique Suisse (<a href="http://www.evangelique.ch">www.evangelique.ch</a>).</p>
-				
-				<h2>Nos activités</h2>
-	      
-	     	<p><center><img src="assets/images/pasteur_motard.png"></center></p>
-				
-				<p><b>Groupe de maison à Flendruz</b> – Tous les mardis soirs 20:00 – Garage du Vanil chez Andrée Eggen</p>
-				
-				<p><b>Célébrations de l’Evangile</b> – Tous les 1er dimanches du mois – Dans une salle publique du Pays-d'Enhaut (voir annonce).</p>
-				
-				<h2>Contact</h2>
-				<p>Pour plus d’informations, vous pouvez nous contacter à l’adresse suivante : rougemont@eebulle.ch</p>
-
-      </div>
-    </section>
-
-    <!-- scrollbar scaffold (do not touch!) -->
-		<div id="scrollbar">
-		  <div id="scrollcursor">
-		  </div>
-		  <ul id="scrolllinks">
-		  </ul>
-		</div>
-
-	</body>
-
+	<!-- Analytics -->
 	<script>
-    // fire metroline
-		$(window).load(function(){ new Metroline(); });
-  </script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-38967567-5', 'auto');
+		ga('send', 'pageview');
+	</script>
+</head>
+
+<body>
+
+	<!-- section n°1 -->
+	<section data-title="Bienvenue!" class="fixed f1" id="bienvenue">
+		<h1 class="maintitle">Pays-d'Enhaut</h1>
+		<p class="subtitle">
+			Célébration de l'évangile<br>
+			Gospel Celebration
+		</p>
+		<p>
+			<img src="assets/images/Enhaut w.png" style="width: 226px; padding-top: 80px;" />
+		</p>
+	</section>
+
+	<!-- section n°2 -->
+	<section data-title="Présentation" class="scrolling s1" id="presentation">
+		<div class="container">
+			<h2>Qui sommes-nous?</h2>
+			<p><img src="assets/images/bullen.png" class="bullen"><b>Les Célébrations de l’Evangile</b> sont des événements
+				mensuels organisés par Le Refuge, église d'Enhaut, qui est membre du (<a href="https://network.eebulle.ch" target="_blank">Bulle
+					network</a>). Nous créons ensemble un espace multiculturel et dynamique pour manifester la présence de Dieu en
+				faveur de ceux qui le recherchent ou qui le connaissent déjà.</p>
+			<p>En plus de ces célébrations mensuelles, nous nous réunissons en groupe de maison tous les mardis soirs à 20:15 à
+				Flendruz.</p>
+			<p><b>Notre mission</b> : Nous faisons connaître la puissance libératrice de Jésus-Christ dans le Pays d’en-Haut
+				vaudois et l’Oberland bernois.</p>
+			<p><img src="assets/images/michelr.png" class="right"><b>Notre historique dans la région</b> : Nos activités ont
+				démarré il y a plusieurs dizaines d’années par la création d'un groupe de prières chez Andrée Eggen à Flendruz sous
+				la houlette du pasteur Michel Renevier. Ce groupe a su persévérer jusqu’à ce jour. Aujourd’hui, nous travaillons à
+				une nouvelle saison de développement en démarrant une nouvelle communauté nommée: Le Refuge église d'Enhaut. Notre
+				vision à terme est la croissance d'une église vivante dans cette magnifique région.</p>
+
+			<p><img src="assets/images/people2.jpg" class="people2"><b>Notre équipe</b> : Nos activités sont au bénéfice de
+				l'équipe de ministères du Bulle network. Nous avons la joie d’avoir sur place un couple
+				membre de notre équipe : le pasteur Jean-Pierre Sordet et son épouse Evelyne. Jean-Pierre est en âge de la
+				retraite, mais
+				pas dans le ministère ! Son soutien, avec celui aussi de son épouse, sont très précieux au développement de
+				l’église.</p>
+
+			<p><b>Notre appartenance</b> : Notre église au pays-d'Enhaut, au travers du Bulle Network, est membre des Eglises
+				Evangéliques Apostoliques Romandes (<a href="http://www.eear.ch">www.eear.ch</a>) et appartient au Réseau
+				Evangélique Suisse (<a href="http://www.evangelique.ch">www.evangelique.ch</a>).</p>
+
+			<h2>Nos activités</h2>
+
+			<p>
+				<center><img src="assets/images/7.10 - Enhaut.png"></center>
+			</p>
+
+			<p><b>Groupe de maison à Flendruz</b> – Tous les mardis soirs 20:00 – Garage du Vanil chez Andrée Eggen</p>
+
+			<p><b>Célébrations de l’Evangile</b> – Tous les 1er dimanches du mois – Dans une salle publique du Pays-d'Enhaut
+				(voir annonce).</p>
+
+			<h2>Contact</h2>
+			<p>Pour plus d’informations, vous pouvez nous contacter à l’adresse suivante : refuge-enhaut@bullenetwork.ch</p>
+
+		</div>
+	</section>
+
+	<!-- scrollbar scaffold (do not touch!) -->
+	<div id="scrollbar">
+		<div id="scrollcursor">
+		</div>
+		<ul id="scrolllinks">
+		</ul>
+	</div>
+
+</body>
+
+<script>
+	// fire metroline
+	$(window).load(function () { new Metroline(); });
+</script>
 
 </html>
