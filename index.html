@@ -5,9 +5,10 @@
 	<title>Eglise le Refuge d'Enhaut</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="assets/stylesheets/application.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/JS-Tech/op-common/master/op-stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="assets/stylesheets/op-stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="assets/stylesheets/loadrr.css">
 	<script src="assets/javascripts/jquery-2.1.4.min.js"></script>
-	<script src="https://cdn.rawgit.com/nkcr/metroline.js/master/lib/metroline.min.js#1"></script>
+	<script src="assets/javascripts/metroline.min.js#1"></script>
 
 	<!-- favicon stuff -->
 	<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicons/apple-touch-icon-57x57.png">
@@ -35,49 +36,52 @@
 	<!-- Mobile compatibility -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Analytics -->
-	<script>
-		(function (i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date(); a = s.createElement(o),
-				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-		ga('create', 'UA-38967567-5', 'auto');
-		ga('send', 'pageview');
-	</script>
 </head>
 
 <body>
 
 	<!-- section n°1 -->
 	<section data-title="Bienvenue!" class="fixed f1" id="bienvenue">
-		<h1 class="maintitle">Pays-d'Enhaut</h1>
+		<!-- <h1 class="maintitle">Pays-d'Enhaut</h1>
 		<p class="subtitle">
 			Célébration de l'évangile<br>
 			Gospel Celebration
 		</p>
 		<p>
 			<img src="assets/images/Enhaut w.png" style="width: 226px; padding-top: 80px;" />
-		</p>
+		</p> -->
+		<div data-fetch="https://panda.bullenetwork.ch/directus/items/enhaut_sections/1">
+			<div class="loadrr">
+				<div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
 	</section>
 
 	<!-- section n°2 -->
-	<section data-title="Présentation" class="scrolling s1" id="presentation">
+	<!-- <section data-title="Présentation" class="scrolling s1" id="presentation">
 		<div class="container">
 			<h2>Qui sommes-nous?</h2>
 			<p><img src="assets/images/bullen.png" class="bullen"><b>Les Célébrations de l’Evangile</b> sont des événements
-				mensuels organisés par Le Refuge, église d'Enhaut, qui est membre du (<a href="https://network.eebulle.ch" target="_blank">Bulle
+				mensuels organisés par Le Refuge, église d'Enhaut, qui est membre du (<a href="https://network.eebulle.ch"
+					target="_blank">Bulle
 					network</a>). Nous créons ensemble un espace multiculturel et dynamique pour manifester la présence de Dieu en
 				faveur de ceux qui le recherchent ou qui le connaissent déjà.</p>
-			<p>En plus de ces célébrations mensuelles, nous nous réunissons en groupe de maison tous les mardis soirs à 20:15 à
+			<p>En plus de ces célébrations mensuelles, nous nous réunissons en groupe de maison tous les mardis soirs à 20:15
+				à
 				Flendruz.</p>
 			<p><b>Notre mission</b> : Nous faisons connaître la puissance libératrice de Jésus-Christ dans le Pays d’en-Haut
 				vaudois et l’Oberland bernois.</p>
 			<p><img src="assets/images/michelr.png" class="right"><b>Notre historique dans la région</b> : Nos activités ont
-				démarré il y a plusieurs dizaines d’années par la création d'un groupe de prières chez Andrée Eggen à Flendruz sous
-				la houlette du pasteur Michel Renevier. Ce groupe a su persévérer jusqu’à ce jour. Aujourd’hui, nous travaillons à
-				une nouvelle saison de développement en démarrant une nouvelle communauté nommée: Le Refuge église d'Enhaut. Notre
+				démarré il y a plusieurs dizaines d’années par la création d'un groupe de prières chez Andrée Eggen à Flendruz
+				sous
+				la houlette du pasteur Michel Renevier. Ce groupe a su persévérer jusqu’à ce jour. Aujourd’hui, nous travaillons
+				à
+				une nouvelle saison de développement en démarrant une nouvelle communauté nommée: Le Refuge église d'Enhaut.
+				Notre
 				vision à terme est la croissance d'une église vivante dans cette magnifique région.</p>
 
 			<p><img src="assets/images/people2.jpg" class="people2"><b>Notre équipe</b> : Nos activités sont au bénéfice de
@@ -106,6 +110,18 @@
 			<p>Pour plus d’informations, vous pouvez nous contacter à l’adresse suivante : refuge-enhaut@bullenetwork.ch</p>
 
 		</div>
+	</section> -->
+
+	<section data-title="Présentation" class="scrolling s1" id="presentation">
+		<div class="container" data-fetch="https://panda.bullenetwork.ch/directus/items/enhaut_sections/2">
+			<div class="loadrr">
+				<div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
 	</section>
 
 	<!-- scrollbar scaffold (do not touch!) -->
@@ -119,8 +135,43 @@
 </body>
 
 <script>
+
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+	var lang = urlParams.get("lang")
+	if (lang === null && (lang != "en" || lang != "de")) {
+		lang = "fr"
+	}
+
+	var contentField = "content"
+	if (lang !== "fr") {
+		contentField = contentField + "_" + lang
+	}
+
+	const boxPadding = 300;
+	const maxRetry = 3;
+	const waitFetch = 10;
+	document.querySelectorAll('[data-fetch]').forEach((el, id) => {
+		const url = el.dataset.fetch
+		const checkLoad = function () {
+			var position = el.getBoundingClientRect();
+			// checking for partial visibility
+			if (position.top < window.innerHeight + boxPadding && position.bottom >= -boxPadding) {
+				window.removeEventListener('scroll', checkLoad);
+				fetch(url).then((resp) => {
+					return resp.json();
+				}).then((data) => {
+					el.innerHTML = data.data[contentField]
+				});
+			}
+		}
+		checkLoad();
+		window.addEventListener('scroll', checkLoad);
+	});
+
 	// fire metroline
 	$(window).load(function () { new Metroline(); });
+
 </script>
 
 </html>
